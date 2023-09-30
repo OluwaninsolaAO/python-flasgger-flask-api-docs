@@ -12,10 +12,6 @@ python-dotenv
 requests
 flask-swagger-ui
 flasgger
-alembic
-parameterized
-httplib2
-celery
 redis
 jinja2
 bcrypt
