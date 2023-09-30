@@ -1,0 +1,53 @@
+updates existing user in storage
+---
+description: |
+  This endpoint allows you to update users.
+
+tags:
+  - users
+
+security:
+  - Auth: []
+
+parameters:
+  - name: user_id
+    in: path
+    description: User ID
+    required: true
+    schema:
+      type: string
+      format: uuid
+  - name: user data
+    in: body
+    required: true
+    schema:
+      type: object
+      properties:
+        name:
+          type: string
+          example: 'John Maxwell'
+        email:
+          type: string
+          example: 'johndoe@mail.com'
+        address:
+          type: string
+          example: '123 Main St, County'
+        role:
+          type: string
+          example: 'admin'
+
+responses:
+  200:
+    description: User data updated successfully
+
+  400:
+    description: Bad Request, no or bad parameters in request.
+
+  401:
+    description: Unauthorized, log-in required or active user didn't have appropriate priviledges.
+
+  404:
+    description: Not found, requested resource is not found.
+
+  422:
+    description: Data Intergrity Error, duplicate email or phone number found.

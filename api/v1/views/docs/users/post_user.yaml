@@ -1,0 +1,49 @@
+create new user in storage
+---
+description: |
+  This endpoint allows you to create users.
+
+tags:
+  - users
+
+security:
+  - Auth: []
+
+parameters:
+  - name: user data
+    in: body
+    required: true
+    schema:
+      type: object
+      properties:
+        name:
+          type: string
+          example: 'John Doe'
+        email:
+          type: string
+          example: 'johndoe@example.com'
+        phone:
+          type: string
+          example: '123-456-7890'
+        address:
+          type: string
+          example: '123 Main St, City'
+        role:
+          type: string
+          example: 'admin'
+        password:
+          type: string
+          example: 'securepassword'
+
+responses:
+  201:
+    description: User created successfully
+
+  400:
+    description: Bad Request, no or bad parameters in request.
+
+  401:
+    description: Unauthorized, log-in required or active user didn't have appropriate priviledges.
+
+  422:
+    description: Data Intergrity Error, duplicate email or phone number found.

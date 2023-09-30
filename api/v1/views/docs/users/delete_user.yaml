@@ -1,0 +1,29 @@
+deletes User with a matching user_id
+---
+description: |
+  This endpoint allows you to delete a user currently stored in the system with a matching user_id.
+
+tags:
+  - users
+
+security:
+  - Auth: []
+
+parameters:
+  - name: user_id
+    in: path
+    description: User ID
+    required: true
+    schema:
+      type: string
+      format: uuid
+
+responses:
+  200:
+    description: User deleted successfully
+
+  401:
+    description: Unauthorized, log-in required or active user didn't have appropriate priviledges.
+
+  404:
+    description: Not found, requested resource is not found.

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# executes setup_db.sql which euqally deletes the contents of the db
+cat ./setup_db.sql | mysql -u root -p
