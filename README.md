@@ -1,5 +1,7 @@
 # Python Flasgger Flask API Docs
 
+This is a comprehensive boilerplate project that combines Python's Flask framework and the Flasgger library to simplify the process of creating interactive API documentation for Flask-based web applications. This repository provides a starting point for developers looking to build RESTful APIs with Flask while seamlessly generating interactive Swagger-based documentation to enhance API understanding and testing.
+
 This project is built using Python Flask, ensured to have python3 and python3-pip installed and optionally python3-venv. Depending on your OS, read how to install these packages on your Machince.
 
 Follow these steps to get the project ready to run on your Machine.

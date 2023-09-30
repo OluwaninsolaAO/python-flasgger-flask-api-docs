@@ -22,7 +22,7 @@ class AppConfig:
     SECRET_KEY = getenv('API_SECRET_KEY')
     SWAGGER = {
         'title': 'Python Flasgger Flask API Docs',
-        'description': "This project is built using Python Flask, ensured to have python3 and python3-pip installed and optionally python3-venv. Depending on your OS, read how to install these packages on your Machince. \n\n`[NB: protected routes are opened in testing except routes bounded to a user specific actions]`",
+        'description': "This is a comprehensive boilerplate project that combines Python's Flask framework and the Flasgger library to simplify the process of creating interactive API documentation for Flask-based web applications. This repository provides a starting point for developers looking to build RESTful APIs with Flask while seamlessly generating interactive Swagger-based documentation to enhance API understanding and testing.\n\nThis project is built using Python Flask, ensured to have python3 and python3-pip installed and optionally python3-venv. Depending on your OS, read how to install these packages on your Machince. \n\n`[NB: protected routes are opened in testing except routes bounded to a user specific actions]`",
         'hide_top_bar': True,
         'specs_route': '/v1/docs',
         'securityDefinitions': {
