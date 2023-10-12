@@ -112,7 +112,7 @@ def server_error(error) -> str:
         "status": "error",
         "message": "Internal Server Error",
         "data": None
-    }), 403
+    }), 500
 
 
 if __name__ == '__main__':
