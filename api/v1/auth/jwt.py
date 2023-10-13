@@ -33,6 +33,9 @@ class JWT(Auth):
 
         token = jwt.encode(payload=payload, key=self.secret_key,
                            algorithm='HS256')
+        if isinstance(token, bytes):
+            token = token.decode('utf-8')
+
         return str(token)
 
     def get_user_id(self, token: str = None) -> str:
